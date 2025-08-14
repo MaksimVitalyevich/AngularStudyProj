@@ -1,0 +1,18 @@
+<form class="city-form" (ngSubmit)="saveCity()" #cityForm="ngForm">
+    <label>Страна: 
+        <input [(ngModel)]="cityData.country" name="country">
+    </label><br>
+    <label>Область/Регион: 
+        <input [(ngModel)]="cityData.region" name="region">
+    </label><br>
+    <label>Город: 
+        <input [(ngModel)]="cityData.cityName" name="cityName">
+    </label><br>
+    <label>Код города: 
+        <input [(ngModel)]="cityData.cityCode" name="cityCode">
+    </label><br>
+    <label>Номер региона: 
+        <input [(ngModel)]="cityData.regionNumber" name="regionNumber">
+    </label><br>
+    <button type="submit">Сохранить</button>
+</form>

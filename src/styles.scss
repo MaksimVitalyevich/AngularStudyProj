@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+app-headernav,
+app-figure-one,
+app-form,
+app-figure-two,
+app-footer {
+    display: block;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.figure-half {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+  
+.figure-half img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+  
+.top-half img {
+    object-position: center top;
+}
+  
+.bottom-half img {
+    object-position: center bottom;
+}

@@ -1,0 +1,45 @@
+.city-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #fae3d9, #ffb6b9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.city-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
+}
+  
+.city-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+.city-form input:focus {
+    border-color: #ff6f91;
+    outline: none;
+}
+  
+.city-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+.city-form button:hover {
+    background: #ff4e78;
+}
