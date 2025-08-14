@@ -1,27 +1,15 @@
 # CityVisitCard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+Этот проект создан при помощи: [Angular CLI](https://github.com/angular/angular-cli) версия: 18.0.0.
 
-## Development server
+## Описание:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Простой набор учебного материала по Angular. Данный проект является визитной карточкой ввода любой страны и города. Вся информация сохраняется в консоли браузера и выводится предупреждающее сообщение об успешных добавленных данных. Первая версия проекта (1.0), с возможностью изменения содержимого проекта на любой тип!
 
-## Code scaffolding
+## Как работает?:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+После запуска проекта, вы попадаете на главную страницу визит-карточки. Есть кнопки для перехода на другие страницы (пока не работают, заглушки). В середине разметки, можно заполнить данные любого города и страны, после нажать кнопку "Сохранить". Информация запишется на месте в консоли, с всплывающим окном успешной записи. Все стили учтены. Порядок расположения визит-карточки - вертикальный.  Для динамических данных был использован модуль FormBuilder.
 
-## Build
+## Автор данного проекта:
+Максим Витальевич, 2025
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
