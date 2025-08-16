@@ -1,0 +1,16 @@
+<h2>Данные выбранного города:</h2>
+
+<table class="city-table">
+    <thead>
+        <tr>
+            <th>Поле</th>
+            <th>Значение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let entry of cityEntries">
+            <td>{{ entry.label }}</td>
+            <td>{{ entry.value }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -4,13 +4,38 @@
     text-align: center;
 }
 
-.city-bar button {
-    margin: 0 10px;
-    padding: 8px 12px;
-    background: #fae3d9;
+.info-Btn {
+    background-color: aquamarine;
     border: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border-radius: 6px;
     cursor: pointer;
 }
-.city-bar button:hover {
-    background: #ffb6b9;
+.info-Btn:hover {
+    background-color: aqua;
+}
+
+.logout-Btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.logout-Btn:hover {
+    background-color: #d32f2f;
+}
+
+.login-Btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.login-Btn:hover {
+    background-color: #45a049;
 }

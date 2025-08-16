@@ -1,5 +1,14 @@
+<link rel="stylesheet" href="../headernav/headernav.component.scss">
+
 <nav class="city-bar">
-    <button routerLink="/">Главная страница</button>
-    <button routerLink="/info">Информация</button>
-    <button (click)="logout()">Выход</button>
+    <button routerLink="/" class=" info-Btn">Главная страница</button>
+    <button routerLink="/info" class="info-Btn">Информация</button>
+
+    <!--Если БЫЛ вход-->
+    <button *ngIf="IsloggedIn; else loginBtn" (click)="logout()" [ngClass]="'logout-Btn'">Выход</button>
+
+    <!--Если НЕ было входа-->
+    <ng-template #loginBtn>
+        <button (click)="login()" [ngClass]="'login-Btn'">Войти</button>
+    </ng-template>
 </nav>

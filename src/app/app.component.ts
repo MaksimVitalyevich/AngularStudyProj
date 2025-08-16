@@ -5,11 +5,19 @@ import { FigureOneComponent } from './figure-one/figure-one.component';
 import { FormComponent } from './form/form.component';
 import { FigureTwoComponent } from './figure-two/figure-two.component';
 import { FooterComponent } from './footer/footer.component';
+import { ResultComponent } from './result/result.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeadernavComponent, FigureOneComponent, FormComponent, FigureTwoComponent, FooterComponent],
+  imports: 
+  [RouterOutlet, 
+  HeadernavComponent, 
+  FigureOneComponent, 
+  FormComponent, 
+  FigureTwoComponent, 
+  FooterComponent, 
+  ResultComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

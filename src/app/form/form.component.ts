@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -17,8 +18,10 @@ export class FormComponent {
     regionNumber: 0
   }
 
+  constructor(private router: Router) {}
+
   saveCity() {
-    console.log('Город сохранен:', this.cityData);
-    alert(`Вы добавили город: ${this.cityData.cityName}, ${this.cityData.country}`);
+    console.log("Данные отправлены: ", this.cityData);
+    this.router.navigate(['/result'], {state: {data: this.cityData } });
   }
 }
