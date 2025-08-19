@@ -5,7 +5,6 @@ import { FigureOneComponent } from './figure-one/figure-one.component';
 import { FormComponent } from './form/form.component';
 import { FigureTwoComponent } from './figure-two/figure-two.component';
 import { FooterComponent } from './footer/footer.component';
-import { ResultComponent } from './result/result.component';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +15,7 @@ import { ResultComponent } from './result/result.component';
   FigureOneComponent, 
   FormComponent, 
   FigureTwoComponent, 
-  FooterComponent, 
-  ResultComponent],
+  FooterComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

@@ -8,11 +8,22 @@
     <label>Город: 
         <input [(ngModel)]="cityData.cityName" name="cityName">
     </label><br>
+    <label>Население:
+        <input type="number" [(ngModel)]="cityData.population" name="population">
+    </label><br>
     <label>Код города: 
-        <input [(ngModel)]="cityData.cityCode" name="cityCode">
+        <input type="number" [(ngModel)]="cityData.cityCode" name="cityCode">
     </label><br>
     <label>Номер региона: 
-        <input [(ngModel)]="cityData.regionNumber" name="regionNumber">
+        <input type="number" [(ngModel)]="cityData.regionNumber" name="regionNumber">
+    </label><br>
+    <label>Основан:
+        <input type="number" [(ngModel)]="cityData.founded" name="founded">
     </label><br>
     <button type="submit">Сохранить</button>
 </form>
+
+<div class="formatted-cityString">
+    <h2>Дополнительная информация города:</h2>
+    <p>{{ cityCardData }}</p>
+</div>

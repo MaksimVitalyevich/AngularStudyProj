@@ -43,3 +43,30 @@
 .city-form button:hover {
     background: #ff4e78;
 }
+
+.formatted-cityString {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .formatted-cityString h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  .formatted-cityString p {
+    margin: 10px 0 0 0;
+    font-weight: 500;
+  }

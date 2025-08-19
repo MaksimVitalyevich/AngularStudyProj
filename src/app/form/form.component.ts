@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { CityInfoPipe } from '../city-info.pipe';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CityInfoPipe],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
@@ -14,14 +14,18 @@ export class FormComponent {
     country: '',
     region: '',
     cityName: '',
+    population: 0,
     cityCode: 0,
-    regionNumber: 0
+    regionNumber: 0,
+    founded: 0
   }
 
-  constructor(private router: Router) {}
+  cityCardData: string = '';
 
   saveCity() {
+    const pipe = new CityInfoPipe();
     console.log("Данные отправлены: ", this.cityData);
-    this.router.navigate(['/result'], {state: {data: this.cityData } });
+    this.cityCardData = pipe.transform(this.cityData);
+    alert("Данные записаны в строку успешно! Проверь строку ниже...");
   }
 }
