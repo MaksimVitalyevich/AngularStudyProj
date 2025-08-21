@@ -1,29 +1,46 @@
-<form class="city-form" (ngSubmit)="saveCity()" #cityForm="ngForm">
+<form class="city-form" [formGroup]="cityData">
     <label>Страна: 
-        <input [(ngModel)]="cityData.country" name="country">
+        <input formControlName="country">
     </label><br>
+
     <label>Область/Регион: 
-        <input [(ngModel)]="cityData.region" name="region">
+        <input formControlName="region">
     </label><br>
+
     <label>Город: 
-        <input [(ngModel)]="cityData.cityName" name="cityName">
+        <input formControlName="cityName">
     </label><br>
+
     <label>Население:
-        <input type="number" [(ngModel)]="cityData.population" name="population">
+        <input type="number" formControlName="population">
     </label><br>
+
     <label>Код города: 
-        <input type="number" [(ngModel)]="cityData.cityCode" name="cityCode">
+        <input type="number" formControlName="cityCode">
     </label><br>
+
     <label>Номер региона: 
-        <input type="number" [(ngModel)]="cityData.regionNumber" name="regionNumber">
+        <input formControlName="regionNumber">
     </label><br>
+
     <label>Основан:
-        <input type="number" [(ngModel)]="cityData.founded" name="founded">
+        <input type="number" formControlName="founded">
     </label><br>
-    <button type="submit">Сохранить</button>
+
+    <button [disabled]="cityData.invalid" type="submit" (click)="saveCity()">Сохранить</button>
+</form>
+
+<h3>Раздел погоды:</h3>
+<form class="city-weather" [formGroup]="weatherForm">
+    <label>Погода в данном городе:
+        <input formControlName="weatherText" placeholder="Ясно">
+        <input type="number" formControlName="weatherTemp" placeholder="Температура">
+    </label><br>
 </form>
 
 <div class="formatted-cityString">
     <h2>Дополнительная информация города:</h2>
     <p>{{ cityCardData }}</p>
+    <hr>
+    <p *ngIf="formattedWeather">Погода: {{ formattedWeather }}</p>
 </div>

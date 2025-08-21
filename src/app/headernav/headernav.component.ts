@@ -20,4 +20,8 @@ export class HeadernavComponent {
     this.IsloggedIn = false;
     alert("Выход выполнен!");
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
 }

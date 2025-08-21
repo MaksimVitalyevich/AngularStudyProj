@@ -44,6 +44,30 @@
     background: #ff4e78;
 }
 
+.city-weather {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #98e7df, #a8c8f2);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.city-weather input {
+    width: 25%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+.city-weather input:focus {
+    border-color: #6fffdb;
+    outline: none;
+}
+
 .formatted-cityString {
     max-width: 600px;
     margin: 20px auto;

@@ -1,8 +1,6 @@
-<link rel="stylesheet" href="../headernav/headernav.component.scss">
-
 <nav class="city-bar">
-    <button routerLink="/" class=" info-Btn">Главная страница</button>
-    <button routerLink="/info" class="info-Btn">Информация</button>
+    <button (click)="reloadPage()" class=" info-Btn">Главная страница</button>
+    <button type="button" class="info-Btn">Информация (Не работает!)</button>
 
     <!--Если БЫЛ вход-->
     <button *ngIf="IsloggedIn; else loginBtn" (click)="logout()" [ngClass]="'logout-Btn'">Выход</button>
