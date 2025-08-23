@@ -5,6 +5,7 @@ import { FigureOneComponent } from './figure-one/figure-one.component';
 import { FormComponent } from './form/form.component';
 import { FigureTwoComponent } from './figure-two/figure-two.component';
 import { FooterComponent } from './footer/footer.component';
+import { ResultComponent } from './result/result.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { FooterComponent } from './footer/footer.component';
   [RouterOutlet, 
   HeadernavComponent, 
   FigureOneComponent, 
-  FormComponent, 
+  FormComponent,
+  ResultComponent, 
   FigureTwoComponent, 
   FooterComponent],
   templateUrl: './app.component.html',

@@ -30,8 +30,8 @@
     <button [disabled]="cityData.invalid" type="submit" (click)="saveCity()">Сохранить</button>
 </form>
 
-<h3>Раздел погоды:</h3>
 <form class="city-weather" [formGroup]="weatherForm">
+    <h3>Раздел погоды:</h3>
     <label>Погода в данном городе:
         <input formControlName="weatherText" placeholder="Ясно">
         <input type="number" formControlName="weatherTemp" placeholder="Температура">

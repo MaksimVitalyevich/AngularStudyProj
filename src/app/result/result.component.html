@@ -1,16 +1,34 @@
-<h2>Данные выбранного города:</h2>
+<div class="eventcard-selector">
+    <h2>События города:</h2>
 
-<table class="city-table">
-    <thead>
-        <tr>
-            <th>Поле</th>
-            <th>Значение</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let entry of cityEntries">
-            <td>{{ entry.label }}</td>
-            <td>{{ entry.value }}</td>
-        </tr>
-    </tbody>
-</table>
+    <select #city (change)="switchCity(city.value)">
+        <option [value]="1">Москва</option>
+        <option [value]="2">Париж</option>
+        <option [value]="3">Красноярск</option>
+        <option [value]="4">Анкара</option>
+        <option [value]="5">Пекин</option>
+</select>
+</div>
+<hr>
+<div class="eventadditive-container">
+    <h3>Добавление нового события:</h3>
+    <input placeholder="Название" [(ngModel)]="newEvent.title">
+    <input placeholder="Дата (yyyy-mm-dd)" [(ngModel)]="newEvent.date">
+    <input placeholder="Место " [(ngModel)]="newEvent.place">
+    <input placeholder="Описание " [(ngModel)]="newEvent.description">
+
+    <button (click)="addEvent()">Добавить</button>
+</div>
+
+<div *ngIf="events.length === 0">
+    Никаких событий не запланированно вообще!
+</div>
+
+<div *ngFor="let event of events" class="event-card">
+    <h3>{{ event.title }}</h3>
+    <p><b>Дата:</b> {{ event.date }}</p>
+    <p><b>Место:</b> {{ event.place }}</p>
+    <p>{{ event.description }}</p>
+    <button (click)="deleteEvent(event.id!)">Удалить</button>
+    <button (click)="editEvent(event)">Редактировать</button>
+</div>
