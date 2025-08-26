@@ -1,6 +1,14 @@
 <app-headernav></app-headernav>
 <app-figure-one></app-figure-one>
 <app-form></app-form>
-<app-result></app-result>
+<div class="route-block">
+    <h1>Выберите дополнительные разделы ниже. Доступны: 1) События; 2) Погода.</h1>
+    <button [routerLink]="[{ outlets: { events: ['events'] } }]">1) Открыть события</button>
+    <button [routerLink]="[{ outlets: { weather: ['weather'] } }]">2) Открыть погоду</button>
+</div>
+<hr>
+<router-outlet></router-outlet>
+<router-outlet name="events"></router-outlet>
+<router-outlet name="weather"></router-outlet>
 <app-figure-two></app-figure-two>
 <app-footer></app-footer>

@@ -30,17 +30,7 @@
     <button [disabled]="cityData.invalid" type="submit" (click)="saveCity()">Сохранить</button>
 </form>
 
-<form class="city-weather" [formGroup]="weatherForm">
-    <h3>Раздел погоды:</h3>
-    <label>Погода в данном городе:
-        <input formControlName="weatherText" placeholder="Ясно">
-        <input type="number" formControlName="weatherTemp" placeholder="Температура">
-    </label><br>
-</form>
-
 <div class="formatted-cityString">
     <h2>Дополнительная информация города:</h2>
     <p>{{ cityCardData }}</p>
-    <hr>
-    <p *ngIf="formattedWeather">Погода: {{ formattedWeather }}</p>
 </div>

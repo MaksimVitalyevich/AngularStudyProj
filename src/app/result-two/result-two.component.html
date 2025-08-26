@@ -1,0 +1,11 @@
+<form class="city-weather" [formGroup]="weatherForm">
+    <h3>Раздел погоды:</h3>
+    <label>Погода в данном городе:
+        <input formControlName="weatherText" placeholder="Ясно">
+        <input type="number" formControlName="weatherTemp" placeholder="Температура">
+    </label><br>
+</form>
+
+<section class="formatted-weather">
+    <p *ngIf="formattedWeather">Погода: {{ formattedWeather }}</p>
+</section>
